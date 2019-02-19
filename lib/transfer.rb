@@ -23,7 +23,7 @@ class Transfer
     end
   end
   
-  def `reverse_transfer
+  def reverse_transfer
     if self.valid? && @status == "complete" && @receiver.balance >= @amount
       @sender.deposit(@amount)
       @receiver.withdraw(@amount)
